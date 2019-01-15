@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-'use strict'
-
 const fs = require('fs')
 const path = require('path')
 const signale = require('signale')
@@ -12,7 +10,10 @@ const argv = require('yargs')
   .array('filter')
   .argv
 
-let [_dirname, _filename, _export, _filter] = ['./', 'data.json', './', null]
+let _dirname: string = './'
+let _filename: string = 'data.json'
+let _export: string = './'
+let _filter: [] = []
 
 if (argv.path) {
   _dirname = argv.path
@@ -29,20 +30,20 @@ if (argv.filter) {
 
 const root = path.join(_dirname)
 
-const getDirs = (path) => {
+const getDirs = (path: string) => {
   const dirs = fs.readdirSync(path)
-  if (_filter) {
-    return dirs.filter((dir) =>
+  if (_filter.length) {
+    return dirs.filter((dir: never) =>
       !_filter.includes(dir)
     )
   }
   return dirs
 }
 
-const setApps = (dirs) => {
+const setApps = (dirs: []) => {
   fs.writeFile(`${_export}/${_filename}`,
-    JSON.stringify(dirs),
-    (err) => {
+    JSON.stringify(dirs, null, 2),
+    (err: string) => {
       if (err) {
         signale.error(err)
       } else {
