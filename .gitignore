@@ -9,7 +9,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+lib
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -21,4 +21,3 @@ build/Release
 
 # Dependency directories
 node_modules/
-jspm_packages/
