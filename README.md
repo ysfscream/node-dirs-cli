@@ -23,7 +23,7 @@ config：
   --help, -h      Display help messages                  [Boolean]
   --path, -p      <target-path> the path to get the content
                                                          [String] [default: "./"]
-  --filename, -n  <filename> export filename      			 [String] [default: "data.json"]
+  --filename, -n  <filename> export filename      		 [String] [default: "data.json"]
   --export, -e    <export-path> the path to export the json
                                                          [String] [default: "./"]
   --filter, -f    <filter> exclude filenames or directories
