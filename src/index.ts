@@ -2,11 +2,38 @@
 const fs = require('fs')
 const path = require('path')
 const signale = require('signale')
+
 const argv = require('yargs')
-  .alias('p', 'path')
-  .alias('n', 'filename')
-  .alias('e', 'export')
-  .alias('f', 'filter')
+  .usage(
+    'get-dirs -p ./ -n data.json -e ./ -f .DS_Store\n\nUsage: get-dirs <target-path> <filename> <export-path> <filter>'
+  )
+  .help('help')
+  .alias('help', 'h')
+  .alias('version', 'v')
+  .option('path', {
+    alias: 'p',
+    description: '<target-path> the path to get the content',
+    default: './',
+    type: 'string',
+  })
+  .option('filename', {
+    alias: 'n',
+    description: '<filename> export filename',
+    default: 'data.json',
+    type: 'string',
+  })
+  .option('export', {
+    alias: 'e',
+    description: '<export-path> the path to export the json',
+    default: './',
+    type: 'string',
+  })
+  .option('filter', {
+    alias: 'f',
+    description: '<filter> exclude filenames or directories',
+    default: '[]',
+    type: 'array',
+  })
   .array('filter')
   .argv
 
@@ -46,8 +73,10 @@ const setApps = (dirs: []) => {
     (err: string) => {
       if (err) {
         signale.error(err)
+        process.exit(1)
       } else {
         signale.success('Get directory of apps successful!')
+        process.exit(0)
       }
     })
 }

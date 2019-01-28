@@ -1,6 +1,6 @@
 # node-get-dirs
 
-📖 Node CLI to get directories
+📖 Node CLI to get directory’s content
 
 ```shell
-npm run dev
+yarn dev
