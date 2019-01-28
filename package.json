@@ -1,6 +1,6 @@
 {
   "name": "node-get-dirs",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "bin": {
     "get-dirs": "./lib/src/index.js"
   },
@@ -19,6 +19,7 @@
   "keywords": [
     "node",
     "CLI",
+    "dirs",
     "file",
     "directory"
   ],
