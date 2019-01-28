@@ -39,6 +39,6 @@ git clone git@github.com:ysfscream/node-get-dirs.git
 # dev
 yarn dev
 
-# buid
+# build
 yarn build
 ```
