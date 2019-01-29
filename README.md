@@ -5,7 +5,7 @@
 ## Usage
 
 ```shell
-yarn add node-get-cli --dev
+yarn add node-get-dirs --dev
 
 get-dirs
 ```
