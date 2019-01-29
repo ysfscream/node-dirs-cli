@@ -19,9 +19,15 @@
   "keywords": [
     "node",
     "CLI",
-    "dirs",
+    "folders",
     "file",
+    "dirs",
     "directory"
+  ],
+  "files": [
+    "lib",
+    "es",
+    "foo.js"
   ],
   "author": "ysfscream",
   "license": "MIT",
