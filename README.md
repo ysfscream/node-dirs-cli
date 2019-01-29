@@ -14,13 +14,13 @@ Details in `get-dirs --help`
 
 ```shell
 get-dirs -h
-get-dirs -p ./ -n data.json -e ./ -f .DS_Store
+get-dirs -p ./ -n data.json -e ./User -f .DS_Store *.js
 
 Usage: get-dirs <target-path> <filename> <export-path> <filter>
 
 config：
-  --version, -v   Display version number                 [Boolean]
-  --help, -h      Display help messages                  [Boolean]
+  --version, -v   display version number                 [Boolean]
+  --help, -h      display help messages                  [Boolean]
   --path, -p      <target-path> the path to get the content
                                                          [String] [default: "./"]
   --filename, -n  <filename> export filename      		 [String] [default: "data.json"]
@@ -30,9 +30,12 @@ config：
   																											 [Arrary] [default: "default]"]
 ```
 
-## Dev
+## Development
 
 ```shell
+#clone
+git clone git@github.com:ysfscream/node-get-dirs.git
+
 # dev
 yarn dev
 
