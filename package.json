@@ -1,17 +1,16 @@
 {
   "name": "node-get-dirs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
-    "get-dirs": "./lib/index.js"
+    "get-dirs": "./lib/src/index.js"
   },
-  "description": "CLI to get directories",
+  "description": "CLI to get directory’s content",
   "main": "index.js",
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
     "prepare": "npm run build",
-    "get-dirs": "node ./lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "keywords": [
     "node",
     "CLI",
+    "dirs",
     "file",
     "directory"
   ],
