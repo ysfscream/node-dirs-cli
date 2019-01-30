@@ -1,8 +1,8 @@
 {
-  "name": "node-get-dirs",
+  "name": "node-dirs-cli",
   "version": "0.0.1",
   "bin": {
-    "get-dirs": "./lib/src/index.js"
+    "get-dirs": "./lib/index.js"
   },
   "description": "CLI to get directory’s content",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ysfscream/node-get-dirs"
+    "url": "git+https://github.com/ysfscream/node-dirs-cli"
   },
   "keywords": [
     "node",
@@ -22,7 +22,9 @@
     "folders",
     "file",
     "dirs",
-    "directory"
+    "directory",
+    "array",
+    "JSON"
   ],
   "files": [
     "lib",

@@ -1,11 +1,11 @@
-# node-get-dirs
+# node-dirs-cli
 
 📖 Node CLI to get directory’s content
 
 ## Usage
 
 ```shell
-yarn add node-get-cli --dev
+yarn add node-dirs-cli --dev
 
 get-dirs
 ```
@@ -34,7 +34,7 @@ config：
 
 ```shell
 #clone
-git clone git@github.com:ysfscream/node-get-dirs.git
+git clone git@github.com:ysfscream/node-dirs-cli.git
 
 # dev
 yarn dev
