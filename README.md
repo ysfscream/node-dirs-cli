@@ -7,7 +7,7 @@
 ```shell
 yarn add node-dirs-cli --dev
 
-get-dirs
+yarn get-dirs
 ```
 
 Details in `get-dirs --help`
