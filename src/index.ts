@@ -67,7 +67,7 @@ const getDirs = (path: string) => {
   return dirs
 }
 
-const setApps = (dirs: []) => {
+const outputFile = (dirs: []) => {
   fs.writeFile(`${_export}/${_filename}`,
     JSON.stringify(dirs, null, 2),
     (err: string) => {
@@ -81,4 +81,4 @@ const setApps = (dirs: []) => {
     })
 }
 
-setApps(getDirs(root))
+outputFile(getDirs(root))
