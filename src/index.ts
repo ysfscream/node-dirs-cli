@@ -51,7 +51,11 @@ if (argv.filename) {
 if (argv.export) {
   _export = argv.export
 }
-if (argv.filter) {
+if (argv.filter && _dirname) {
+  _filter = argv.filter.map(($: string) => 
+    $.replace(_dirname, '')
+  )
+} else if (argv.filter && !_dirname) {
   _filter = argv.filter
 }
 
